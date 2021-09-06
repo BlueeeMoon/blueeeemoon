@@ -1,2 +1,5 @@
 # Bitcoin y Lightning. 
-Un poco de Bitcoin, Lightning, conceptos, ideas, aprendizaje y tips adquiridos a lo largo de mi tiempo aquí.  
+
+[![Donate](https://img.shields.io/badge/Donate-Bitcoin-green.svg)](https://coinos.io/chappiej)
+
+Bitcoin y Lightning, conceptos, ideas, aprendizaje y tips adquiridos a lo largo de mi tiempo aquí.  
