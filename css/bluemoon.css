@@ -16,6 +16,11 @@ li {
     font-size: 20px;
 }
 
+ul.vertical{
+    list-style-type: circle;
+    margin: 0;
+    padding: 0;
+}
 .menu{
     display: flex;
     justify-content: space-between;
@@ -34,9 +39,23 @@ li {
     padding: 20px 30px 20px 30px;
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .titular{
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
+}
+
+.blog{
+    text-align: justify;
+    margin-top: 100px;
+}
+
+.pagina-centrado{
+    padding: 20px 30px 40px 300px;
 }
 
 h1 {
@@ -45,7 +64,7 @@ h1 {
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 40px;
 }
 header{
@@ -70,6 +89,11 @@ header{
     margin: auto;
  }
 
+ .contenedor-blog{
+    max-width: 1280px;
+    width: 90%;
+    margin: auto;
+ }
  /*Arranca seccion sobre mi*/
 h3 {
     text-align: center;
@@ -78,6 +102,12 @@ h3 {
 }
 
 .contenedor-sobremi{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedor-menu{
     display: flex;
     justify-content: space-around;
     align-items: center;
