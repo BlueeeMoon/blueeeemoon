@@ -2,31 +2,45 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bienvenido</title>
     <link rel="stylesheet" type="text/css" href="../css/bluemoon.css">
+    <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
   </head>
 
 <body>
-<header>
-    <div class="contenedor">
-        <div class="menu">
-            <p>Blue Moon</p>
-            <img class="menu-icon" src="../Imagenes/menu.jpeg">
-            <nav>
-                <ul class="lista">
-                    <li class="elementos">Sobre mi</li>
-                    <li class="elementos">Bitcoin</li>
-                    <li class="elementos">Lightning</li>
-                    <li class="elementos">Contacto</li>
-                    <li class="elementos">Blog</li>
-                </ul>
-            </nav>
+    <header>
+        <div class="contenedor">
+            <div class="menu">
+                <p><a href="../index.html">Blue Moon</a></p>
+                <img class="menu-icon" src="Imagenes/menu.jpeg">
+                <nav>
+                    <ul class="lista">
+                        <li class="elementos">Sobre mi</li>
+                        <li class="elementos">Bitcoin</li>
+                        <li class="elementos">Lightning</li>
+                        <li class="elementos">Contacto</li>
+                        <li class="elementos">Blog</li>
+                    </ul>
+                </nav>
+            </div>
+    
         </div>
-
-    </div>
-</header>
-   
+    </header>
+    
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="definicion.html">¿Qué es Bitcoin?</a>
+    <a href="#">Crear un nodo</a>
+    <a href="#">Carteras</a>
+    <a href="#">Conceptos clave</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>  
+  </div>
+  
     <div class="pagina-centrado">
         <section class="contenedor">
             <div class="blog">
@@ -121,5 +135,17 @@
            </div>
         </div>
     </footer>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+        
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+</script>
 </body>
 </html>
