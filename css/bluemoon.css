@@ -97,7 +97,7 @@ header{
     margin: auto;
  }
 
- .contenedor-blog{
+.contenedor-blog{
     max-width: 1280px;
     width: 90%;
     margin: auto;
@@ -250,6 +250,13 @@ span {
         flex-direction: column;
     }
 
+    .pagina-centrado-blockclock{
+        padding: 10px 10px 15px 10px;
+    }
+
+    .pagina-centrado{
+        padding: 10px 10px 15px 10px;
+    }
     .servicio{
         width: 72%;
         margin: auto;
