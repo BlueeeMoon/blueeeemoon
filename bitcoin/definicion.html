@@ -16,11 +16,11 @@
         <div class="contenedor">
             <div class="menu">
                 <p><a href="../index.html">Blue Moon</a></p>
-                <img class="menu-icon" src="Imagenes/menu.jpeg">
+                <img class="menu-icon" src="../Imagenes/menu.jpeg">
                 <nav>
                     <ul class="lista">
                         <a href="../blockclock.html"><li class="elementos">Blockclock</li></a>
-                        <li class="elementos">Bitcoin</li>
+                        <a href="definicion.html"><li class="elementos">Bitcoin</li></a>
                         <li class="elementos">Lightning</li>
                         <li class="elementos">Contacto</li>
                         <li class="elementos">Blog</li>
@@ -34,9 +34,9 @@
 <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a href="definicion.html">¿Qué es Bitcoin?</a>
-    <a href="#">Crear un nodo</a>
+    <a href="utxo.html">UTXO</a>
     <a href="#">Carteras</a>
-    <a href="#">Conceptos clave</a>
+    <a href="conceptos.html">Conceptos clave</a>
   </div>
   
   <div id="main">
@@ -148,6 +148,9 @@
       document.getElementById("mySidebar").style.width = "0";
       document.getElementById("main").style.marginLeft= "0";
     }
+    $('.menu-icon').click(function(){
+        $('header nav').slideToggle();
+    })
 </script>
 </body>
 </html>
