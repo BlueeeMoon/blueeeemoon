@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" type="text/css" href="../css/bluemoon.css">
+    <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width-device-width, user-scalable-no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <header>
+        <div class="contenedor">
+            <div class="menu">
+                <p><a href="../index.html">Blue Moon</a></p>
+                <img class="menu-icon" src="Imagenes/menu.jpeg">
+                <nav>
+                    <ul class="lista">
+                        <a href="../blockclock.html"><li class="elementos">Blockclock</li></a>
+                        <a href="definicion.html"><li class="elemento">Bitcoin</li></a>
+                        <li class="elementos">Lightning</li>
+                        <li class="elementos">Contacto</li>
+                        <li class="elementos">Blog</li>
+                    </ul>
+                </nav>
+            </div>
+    
+        </div>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="definicion.html">¿Qué es Bitcoin?</a>
+        <a href="#">Crear un nodo</a>
+        <a href="#">Carteras</a>
+        <a href="conceptos.html">Conceptos clave</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>  
+    </div>
+
+    <div class="pagina-centrado">
+        <section class="contenedor">
+            <div class="blog">
+                <h2><strong>Conceptos Clave</strong></h2>
+                <p>Si estás aquí es porque quieres aprender acerca de <strong>Bitcoin</strong>, asi que definiré los más importantes de forma simple basados en algunas investigaciones. Me gusta que todo sea de la forma más simple para comprenderlo de la misma manera, ¡comencemos!</p>
+            </div>
+        </section>
+        <section class="contenedor">
+            <div class="blog">
+                <h2>Dirección</h2>
+                <p></p>
+                <p>Satoshi Nakamoto se retiró del público en abril de 2011, ni Satoshi Nakamoto ni nadie más posee control sobre el sistema <strong>Bitcoin</strong>, el cual opera basado en principios matemáticos completamente transparentes.</p>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="contenedor">
+           <div>
+               <p class="elementos">
+                <small>
+                    Copyright © 2021 | BlueMoon
+               </p>
+               <ul class="lista-footer">
+                    <li>
+                        <a href="https://twitter.com/moon33_blue" target="_blank">
+                            <img src="../Imagenes/gorjeo.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/BlueeeMoon" target="_blank">
+                            <img src="../Imagenes/github.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://lntxbot.bigsun.xyz/@blue3moon" target="_blank">
+                            <img src="../Imagenes/bitcoin.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC-VnKfjvFkH_bNy5--cHXAA" target="_blank">
+                            <img src="../Imagenes/youtube.png"> 
+                        </a>
+                    </li>
+               </ul>
+           </div>
+        </div>
+    </footer>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+            
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        $('.menu-icon').click(function(){
+            $('header nav').slideToggle();
+        })
+    </script>
+
+    </body>
+</html>
