@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
+<html>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bienvenido</title>
@@ -9,9 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <meta name="viewport" content="width-device-width, user-scalable-no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-
-  <body>
+</head>
+<body>
     <header>
         <div class="contenedor">
             <div class="menu">
@@ -42,22 +41,20 @@
     <div id="main">
         <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>  
     </div>
-
     <div class="pagina-centrado">
-        <section class="contenedor">
+        <section>
             <div class="blog">
-                <h2><strong>Conceptos Clave</strong></h2>
-                <p>Si estás aquí es porque quieres aprender acerca de <strong>Bitcoin</strong>, asi que definiré los más importantes de forma simple basados en algunas investigaciones. Me gusta que todo sea de la forma más simple para comprenderlo de la misma manera, ¡comencemos!</p>
+                <h2><strong>UTXO</strong></h2>
+                <p>Esta infografía la hice gracias a la anlogía que utilizó un usuario en Twitter, así que me parecio que sería bonito llavarla a imagen.</p>
             </div>
         </section>
-        <section class="contenedor">
-            <div class="blog">
-                <h2>Dirección</h2>
-                <p></p>
-                <p>Satoshi Nakamoto se retiró del público en abril de 2011, ni Satoshi Nakamoto ni nadie más posee control sobre el sistema <strong>Bitcoin</strong>, el cual opera basado en principios matemáticos completamente transparentes.</p>
-            </div>
-        </section>
+        <img src="recursos/utxo.png">
+        <div class="blog">
+            <p>Aquí el Tweet</p>
+        <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Cuando recién escuché sobre UTXO&#39;s no lograba comprender porqué las transacciones incluyen cambio devuelto hacia uno, como si pagáramos en efectivo en la tienda de la esquina.<br><br>Los humanos somos mas buenos imaginando cosas físicas, así que creo que esta analogía ayuda:</p>&mdash; thebatzuk⚡ (@thebatzuk) <a href="https://twitter.com/thebatzuk/status/1445132759211679746?ref_src=twsrc%5Etfw">October 4, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
+        </div>
     </div>
+
     <footer class="footer">
         <div class="contenedor">
            <div>
@@ -105,6 +102,6 @@
             $('header nav').slideToggle();
         })
     </script>
-
-    </body>
+    
+</body>
 </html>

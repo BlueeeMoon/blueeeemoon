@@ -12,7 +12,7 @@
     <script src="https://moscowtime.xyz/widget-no-frame.js"></script>
     <meta name="viewport" content="width-device-width, user-scalable-no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
   </head>
 
   <body>
@@ -25,7 +25,7 @@
                 <nav>
                     <ul class="lista">
                         <a href="blockclock.html"><li class="elementos">Blockclock</li></a>
-                        <li class="elementos">Bitcoin</li>
+                        <a href="bitcoin/definicion.html"><li class="elemento">Bitcoin</li></a>
                         <li class="elementos">Lightning</li>
                         <li class="elementos">Contacto</li>
                         <li class="elementos">Blog</li>
@@ -104,5 +104,10 @@
         </div>
     </footer>
 
+    <script>
+        $('.menu-icon').click(function(){
+            $('header nav').slideToggle();
+        })
+    </script>
     </body>
   </html>
