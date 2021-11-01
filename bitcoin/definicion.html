@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../css/bluemoon.css">
     <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width-device-width, user-scalable-no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   </head>
 
 <body>
@@ -138,19 +138,20 @@
         </div>
     </footer>
 
-<script>
-    function openNav() {
-      document.getElementById("mySidebar").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-    }
-        
-    function closeNav() {
-      document.getElementById("mySidebar").style.width = "0";
-      document.getElementById("main").style.marginLeft= "0";
-    }
-    $('.menu-icon').click(function(){
-        $('header nav').slideToggle();
-    })
-</script>
+    <script>
+        function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        }
+            
+        function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        }
+        $('.menu-icon').click(function(){
+            $('header nav').slideToggle();
+            console.log();
+        })
+    </script>
 </body>
 </html>
