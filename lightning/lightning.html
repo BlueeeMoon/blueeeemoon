@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" type="text/css" href="../css/bluemoon.css">
+    <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="menu">
+                <p><a href="../index.html">Blue Moon</a></p>
+                <img class="menu-icon" src="../Imagenes/menu.jpeg">
+                <nav>
+                    <ul class="lista">
+                        <a href="../blockclock.html"><li class="elementos">Blockclock</li></a>
+                        <a href="../bitcoin/definicion.html"><li class="elementos">Bitcoin</li></a>
+                        <a href="lightning.html"><li class="elementos">Lightning</li></a>
+                        <li class="elementos">Contacto</li>
+                        <li class="elementos">Blog</li>
+                    </ul>
+                </nav>
+            </div>
+    
+        </div>
+    </header>
+    
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="lightning.html">¿Qué es Lightning Network?</a>
+    <a href="#">Watchtowers</a>
+    <a href="#">LNURL</a>
+    <a href="#">Nodo Lightning</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>  
+  </div>
+  
+    <div class="pagina-centrado">
+        <section class="contenedor">
+            <div class="blog">
+                <h2><strong>¿Qué es Lightning Network?</strong></h2>
+                <p>Para comprender mejor que es <strong>Lightning Network</strong> debo explicar cómo funciona <strong>Bitcoin.</strong></p>
+                <p><strong>Bitcoin</strong> se ejecuta en la parte superior de un libro de contabilidad llamado blockchain. Debido a que al usar una cadena de bloques para transacciones puede ser costoso, se diseñó <strong>Lightning Network.</strong></p>
+                
+            </div>
+        </section>
+        <section class="contenedor">
+            <div class="blog">
+                <h2>¿Por qué es costoso hacer transacciones dentro de la cadena?</h2>
+                <p>Conforme se crean más transacciones, se congestiona la red y los usuarios deben pagar tarifas más altas para que su transacción se confirme en el siguiente bloque</p>
+                <p>Estás transacciones son relativamente lentas, se tardan aproximadamente una hora debido a que cada transacción es vista, validada y almacenada por cada computadora participante, esto genera una gran cantidad de datos y es difícil de escalar. Una vez que los bloques están "llenos", el exceso de transacciones se deja esperar en una cola. Muchos usuarios aumentarán las tarifas que están dispuestos a pagar para comprar espacio para sus transacciones en el siguiente bloque. Además de que las transacciones son públicas. </p>
+            </div>
+        </section>
+        <section class="contenedor">
+            <div class="blog">
+                <h2>¿Cómo se resuelve esto?</h2>
+                <p>Para resolver esta congestión de datos se creó Lightning Network que propone una nueva red, una <string>"segunda capa"</string>, donde se pueden realizar <strong>pagos</strong> entre usuarios de igual a igual, sin la necesidad de publicar una transacción en la cadena de bloques de <strong>Bitcoin</strong> para cada pago. Los usuarios pueden pagarse entre sí en <strong>Lightning Network</strong> tantas veces como quieran sin incurrir en tarifas en cadena.</p>
+                <p><strong>Lightning Network</strong> es descentralizado también, los pagos se envían a través de una red de canales de micropagos digitales que utilizan contratos inteligentes, conocidos como canales de pago cuya transferencia de valor ocurre fuera de la cadena de bloques. <strong>Lightning Network</strong> es una red segura de participantes que pueden realizar transacciones a gran volumen y alta velocidad. </p>
+            </div>
+        </section>
+
+        <section class="contenedor">
+            <div class="blog">
+                <h2>¿Cuándo se creó Lightning Network y quién lo creó? </h2>
+                <p>En febrero de 2015, Joseph Poon y Thaddeus Dryja propusieron una posible solución al problema de escalabilidad de Bitcoin, con la publicación de <strong>"The Bitcoin Lightning Network: pagos instantáneos escalables fuera de la cadena"</strong> y la primera implementación se lanzó en 2018. Desde este momento, <strong>Lightning Network</strong> brinda a Bitcoin un mundo de posibilidades, incluida la mejora de la privacidad, la velocidad y la escala. </p>
+                
+            </div>
+        </section>
+
+        <section class="contenedor">
+            <div class="blog">
+                <h2>Algunos conceptos básicos que debe comprender: </h2>
+                <p><strong>Nodo:</strong> Un nodo es un simplemente una aplicación de software que se ejecuta en un computadora y que participa en la red de Lightning Network.</p>
+                <div>
+                    <nav>
+                        <ul class="vertical">
+                            <li>Deben comunicarse de igual a igual con otros nodos Lightning que crean la red.</li>
+                            <li>Acceden a la cadena de bloques de Bitcoin para asegurar los fondos utilizados para los pagos.</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <section class="contenedor">
+            <div class="blog">
+                <h2>Algunos conceptos básicos que debes comprender: </h2>
+                <p><strong>Canal:</strong> Los canales de pago son el componente principal de Lightning Network y son simplemente una conexión directa entre dos nodos que tienen una relación financiera y que funcionan a través de transacciones de apertura y cierre en cadena.</p>
+                <p><strong>Enrutamiento:</strong> En <strong>Lightning Network</strong> los pagos se enrutan a través de uno o más canales de pago siguiendo una ruta del remitente al destinatario. </strong></p>
+                <p>Como mencioné anteriormente para hacer un <strong>“pago”</strong> con Lihtning Network no necesitas hacerlo dentro de la cadena de bloques, así que los pagos enviados a través de canales de pago se denominan pagos fuera de la cadena de bloques.</p>
+            </div>
+        </section>
+
+        <section class="contenedor">
+            <div class="blog">
+                <h2>¿Cómo se hace una apertura de canal?</h2>
+                <p>El proceso sería el siguiente:</p>
+                <div>
+                    <nav>
+                        <ol>
+                            <li>Se realiza una transacción en la cadena de bloques para depositar los fondos en una salida de firma múltiple con la cantidad que desee que contenga el canal y se pagarán tarifas de transacción para abrirlo, a este concepto se le conoce como: <strong><i>transacción de financiamiento.</i></strong></li>
+                            <li>Una vez que la transacción se transmite en cadena, el canal de pago está abierto y listo para hacer pagos.</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor">
+            <div class="blog">
+                <h2>¿Por qué usar Lightning Network?</h2>
+                <p>Con <strong>Lightning Network</strong> puedes hacer pagos instantáneos sin tener que esperar confirmaciones, ya que los fondos se liquidan en segundos, cafés, restaurantes, libros, bares.... además de que se puede utilizarse en terminales de puntos de venta, en transacciones entre dispositivos de usuarios, o en cualquier lugar donde se necesiten pagos rápidos.</p>
+                <p><strong>Micropagos.</strong> Se pueden abrir nuevos mercados con la posibilidad de los micropagos. Lightning permite enviar fondos hasta 0,00000001 de bitcoin sin riesgo de custodia. La blockchain de bitcoin impone actualmente un tamaño mínimo de salida cientos de veces mayor, y una tarifa fija por transacción que hace que los micropagos sean poco prácticos. <strong>Lightning Network</strong> permite pagos mínimos </p>
+                <p>Aquí puedes encontrar el documento de <a href="https://lightning.network/lightning-network-paper.pdf" target="_blank"><strong>Lightning Network</strong></a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+           <div>
+               <p class="elementos">
+                <small>
+                    Copyright © 2021 | BlueMoon
+               </p>
+               <ul class="lista-footer">
+                    <li>
+                        <a href="https://twitter.com/moon33_blue" target="_blank">
+                            <img src="../Imagenes/gorjeo.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/BlueeeMoon" target="_blank">
+                            <img src="../Imagenes/github.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://lntxbot.bigsun.xyz/@blue3moon" target="_blank">
+                            <img src="../Imagenes/bitcoin.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC-VnKfjvFkH_bNy5--cHXAA" target="_blank">
+                            <img src="../Imagenes/youtube.png"> 
+                        </a>
+                    </li>
+               </ul>
+           </div>
+        </div>
+    </footer>
+
+    <script>
+        function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        }
+            
+        function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        }
+        $('.menu-icon').click(function(){
+            $('header nav').slideToggle();
+            console.log();
+        })
+    </script>
+</body>
+</html>
