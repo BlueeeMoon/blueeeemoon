@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" type="text/css" href="../css/bluemoon.css">
+    <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="menu">
+                <p><a href="../index.html">Blue Moon</a></p>
+                <img class="menu-icon" src="../Imagenes/menu.jpeg">
+                <nav>
+                    <ul class="lista">
+                        <a href="../blockclock.html"><li class="elementos">Blockclock</li></a>
+                        <a href="../bitcoin/definicion.html"><li class="elementos">Bitcoin</li></a>
+                        <a href="lightning.html"><li class="elementos">Lightning</li></a>
+                        <li class="elementos">Contacto</li>
+                        <li class="elementos">Blog</li>
+                    </ul>
+                </nav>
+            </div>
+    
+        </div>
+    </header>
+    
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="lightning.html">¿Qué es Lightning Network?</a>
+    <a href="watchtowers.html">Watchtowers</a>
+    <a href="#">LNURL</a>
+    <a href="#">Nodo Lightning</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>  
+  </div>
+  
+    <div class="pagina-centrado">
+        <section class="contenedor">
+            <div class="blog">
+                <h2><strong>¿Qué es una torre de vigilancia (Watchtowers)?</strong></h2>
+                <p>Entre las tecnologías que hace que <string>Lightning Network</string> sea más eficiente se encuentran los Watchtowers, este concepto fue delineado en el documento técnico y básicamente son nodos que vigilan las transacciones asociadas a un canal de pago para poder identificar acciones maliciosas o accidentales en caso de que un nodo este fuera de línea donde quizás un nodo intente cerrar el canal de manera forzada con un estado anterior donde él tenía más fondos de su lado para beneficiarse.</p>
+                <p>Estas torres de vigilancia tiene la habilidad de transmitir el estado válido del canal sin necesidad de que los dos actores estén en línea penalizando al actor malicioso. Cuando configuras un <strong>watchtowers</strong> significa estas autorizando que estos canales vigilen las 24 horas del día, los 7 días de la semana.</p>
+                <p>Este concepto se define de la siguiente manera:</p>
+                <p><strong>Alicia y Bob tienen un canal de pago mutuo.</strong></p>
+                <div>
+                    <nav>
+                        <ol>
+                            <li class="ol">Estado 1: Alicia abrió un canal con Bob y lo hizo con una cantidad de 333333 satoshis.</li>
+                            <li class="ol">Estado 2: Alicia hizo una compra y los 333333 quedan en el lado de Bob.</li>
+                            <li class="ol">Estado 3: Alicia realiza un intercambio submarino (traspaso de bitcoins desde la cadena de bloques hacia la red de Lightning) y el saldo vuelve a su lado del canal.</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <section class="contenedor">
+            <div class="blog">
+                <h2>¿Cómo podría actuar de manera maliciosa Bob?</h2>
+                <p>Alicia no abre su wallet en cierto tiempo, Bob se da cuenta de esto y lo que hace enseguida es enviar una transacción de cierre forzoso indicando que el estado actual es el 2, donde él tiene el saldo de su lado.</p>
+                <p>Si Alicia se da cuenta de este cierre forzoso puede enviar el estado actual probando con ello que Bob actuó de manera maliciosa, sin embargo si no se da cuenta, los watchtowers resuelven este problema penalizando al actor malicioso y transfiriendo todos los fondos a Alicia.</p>
+                <p>Cabe mencionar que si Bob tiene el control del Watchtower de Alicia podría manipularlo diciendo que el estado correcto es el de Bob e ignoraría los estados de Alicia, sin embargo si Alicia se conecta antes del tiempo límite podría dejar como evidencia el intento de fraude que quiso hacer Bob y este perdería todos sus fondos. </p>
+                <p>Existe otra consideración importante que debe tomarse en cuenta, puede ocurrir un error de software donde Bob transmita un estado de canal no válido que es sancionado por una torre de vigilancia, si esto llegará a suceder entonces Bob perderá todos sus fondos. La solución para esto se dio con la propuesta <a href="https://blog.blockstream.com/es/es-eltoo-next-lightning/" target="_blank"><strong>eltoo</strong></a> que básicamente crea dos transacciones para cada estado de canal: una transacción de actualización y una transacción de liquidación. </p>
+                <p>Más información aquí. <a href="https://blockstream.com/eltoo.pdf" target="_blank">aquí</a></p>
+            </div>
+        </section>
+        <section class="contenedor">
+            <div class="blog">
+                <h2>Métodos de monetización.</h2>
+                <p>Los <strong>Watchtowers</strong> podrían recibir un incentivo por brindar estos servicios y pueden implementar varios métodos de monetización ya que retiran la sobrecarga operativa, almacenan todos los estados de canales anteriores de sus clientes, ocasionando costos en el espacio de almacenamiento, existen dos métodos de monetización:</p>
+                <div>
+                    <nav>
+                        <ol>
+                            <li class="ol">Tarifas por transacciones de penalización. </li>
+                            <li class="ol">Servicios de suscripción.</li>
+                            <li class="ol">Transacciones de penalización que las torres de vigilancia toman como tarifas.</li>
+                        </ol>
+                    </nav>
+                </div>
+                <p>Se pueden subcontratar varias torres en caso de que alguna falle.</p>
+            </div>
+        </section>
+
+        <section class="contenedor">
+            <div class="blog">
+                <h2>¿Cómo activar una torre de vigilancia en tu nodo?</h2>
+                <p>Puede activar estas torres necesitará dos cosas:</p>
+                <div>
+                    <nav>
+                        <ol>
+                            <li class="ol">lnd --wtclient.active</li>
+                            <li class="ol">La atalaya URI de una atalaya activa.</li>
+                        </ol>
+                    </nav>
+                </div>
+                <p>Con el siguiente comando se conecta la torre de vigilancia.</p>
+                <p class="code">lncli wtclient add URI@IP:9911</p>
+                <p>Se pueden configurar múltiples torres de vigilancia a través de este método.</p>
+                <p>Asegúrese de abrir el puerto 9911 si necesita acceso remoto o puede elegir un puerto a través de:</p>
+                <p class="code">watchtower.listen</p>
+                <p>Los Watchtowers también tienen soporte para servicios en Tor.</p>
+                <p class="code">lnd --tor.active --tor.v3 --watchtower.active</p>
+                <p>Una vez configurado puede interactuar con el cliente de la torre de vigilancia con el siguiente comando.</p>
+                <p class="code">lncli wtclient tower</p>
+                <p>Puede utilizar el comando siguiente para obtener información de las sesiones.</p>
+                <p class="code">lncli wtclient tower --include_sessions URI</p>
+                <p>La documentación completa se encuentra en el siguiente <a href="https://github.com/lightningnetwork/lnd/blob/master/docs/watchtower.md" target="_blank">enlace.</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+           <div>
+               <p class="elementos">
+                <small>
+                    Copyright © 2021 | BlueMoon
+               </p>
+               <ul class="lista-footer">
+                    <li>
+                        <a href="https://twitter.com/moon33_blue" target="_blank">
+                            <img src="../Imagenes/gorjeo.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/BlueeeMoon" target="_blank">
+                            <img src="../Imagenes/github.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://lntxbot.bigsun.xyz/@blue3moon" target="_blank">
+                            <img src="../Imagenes/bitcoin.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC-VnKfjvFkH_bNy5--cHXAA" target="_blank">
+                            <img src="../Imagenes/youtube.png"> 
+                        </a>
+                    </li>
+               </ul>
+           </div>
+        </div>
+    </footer>
+
+    <script>
+        function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        }
+            
+        function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        }
+        $('.menu-icon').click(function(){
+            $('header nav').slideToggle();
+            console.log();
+        })
+    </script>
+</body>
+</html>
