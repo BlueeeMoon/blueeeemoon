@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" type="text/css" href="../css/bluemoon.css">
+    <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="menu">
+                <p><a href="../index.html">Blue Moon</a></p>
+                <img class="menu-icon" src="../Imagenes/menu.jpeg">
+                <nav>
+                    <ul class="lista">
+                        <a href="../blockclock.html"><li class="elementos">Blockclock</li></a>
+                        <a href="definicion.html"><li class="elementos">Bitcoin</li></a>
+                        <a href="../lightning/lightning.html"><li class="elementos">Lightning</li></a>
+                        <li class="elementos">Contacto</li>
+                        <li class="elementos">Blog</li>
+                    </ul>
+                </nav>
+            </div>
+    
+        </div>
+    </header>
+    
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="definicion.html">¿Qué es Bitcoin?</a>
+    <a href="slides.html">Empezando con Bitcoin</a>
+    <a href="utxo.html">UTXO</a>
+    <a href="#">Carteras</a>
+    <a href="conceptos.html">Conceptos clave</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>  
+  </div>
+  
+    <div class="pagina-centrado">
+        <section class="contenedor">
+            <div class="blog">
+                <h2><strong>Empezando con Bitcoin</strong></h2>
+                <p>Las siguientes diapositivas fueron creadas en base al capítulo 1 de el libro de Andreas M. Antonopoulos, <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch01.asciidoc" target="_blank"><strong>Mastering Bitcoin.</strong></a></p>
+            </div>
+        </section>
+        <section class="contenedor">
+            <div class="blog"></div>
+                <div class="wrapper">
+                    <div class="slider" id="slider">
+                    <ul class="slides">
+                        <li class="slide" id="slide1">
+                        <a href="#">
+                            <img src="../Imagenes/1.jpg" alt="photo 1">
+                        </a>
+                        </li>
+                        <li class="slide" id="slide2">
+                        <a href="#">
+                            <img src="../Imagenes/2.jpg" alt="photo 2">
+                        </a>
+                        </li>
+                        <li class="slide" id="slide3">
+                        <a href="#">
+                            <img src="../Imagenes/3.jpg" alt="photo 3">
+                        </a>
+                        </li>
+                        <li class="slide" id="slide4">
+                        <a href="#">
+                            <img src="../Imagenes/4.jpg" alt="photo 4">
+                        </a>
+                        </li>
+                        <li class="slide" id="slide5">
+                        <a href="#">
+                            <img src="../Imagenes/5.jpg" alt="photo 5">
+                        </a>
+                        </li>
+                        <li class="slide" id="slide6">
+                        <a href="#">
+                            <img src="../Imagenes/6.jpg" alt="photo 1">
+                        </a>
+                        </li>
+                        <li class="slide" id="slide7">
+                            <a href="#">
+                            <img src="../Imagenes/7.jpg" alt="photo 1">
+                            </a>
+                        </li>
+                        <li class="slide" id="slide8">
+                            <a href="#">
+                            <img src="../Imagenes/8.jpg" alt="photo 1">
+                            </a>
+                        </li>
+                        <li class="slide" id="slide9">
+                            <a href="#">
+                            <img src="../Imagenes/9.jpg" alt="photo 1">
+                            </a>
+                        </li>
+                        <li class="slide" id="slide10"> 
+                            <a href="#">
+                            <img src="../Imagenes/10.jpg" alt="photo 1">
+                            </a>
+                        </li>
+                        <li class="slide" id="slide11">
+                            <a href="#">
+                            <img src="../Imagenes/11.jpg" alt="photo 1">
+                            </a>
+                        </li>
+                        <li class="slide" id="slide12">
+                            <a href="#">
+                            <img src="../Imagenes/12.jpg" alt="photo 1">
+                            </a>
+                        </li>
+                        <li class="slide" id="slide13">
+                            <a href="#">
+                            <img src="../Imagenes/13.jpg" alt="photo 1">
+                            </a>
+                        </li>
+                        <li class="slide" id="slide14">
+                            <a href="#">
+                            <img src="../Imagenes/14.jpg" alt="photo 1">
+                            </a>
+                        </li>
+                        <li class="slide" id="slide15">
+                            <a href="#">
+                            <img src="../Imagenes/15.jpg" alt="photo 1">
+                            </a>
+                        </li>
+                        <li class="slide" id="slide16">
+                            <a href="#">
+                            <img src="../Imagenes/16.jpg" alt="photo 1">
+                            </a>
+                        </li>
+                        <li class="slide" id="slide17">
+                            <a href="#">
+                            <img src="../Imagenes/17.jpg" alt="photo 1">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="slider-controler">
+                        <li><a href="#slide1">&bullet;</a></li>
+                        <li><a href="#slide2">&bullet;</a></li>
+                        <li><a href="#slide3">&bullet;</a></li>
+                        <li><a href="#slide4">&bullet;</a></li>
+                        <li><a href="#slide5">&bullet;</a></li>
+                        <li><a href="#slide6">&bullet;</a></li>
+                        <li><a href="#slide7">&bullet;</a></li>
+                        <li><a href="#slide8">&bullet;</a></li>
+                        <li><a href="#slide9">&bullet;</a></li>
+                        <li><a href="#slide10">&bullet;</a></li>
+                        <li><a href="#slide11">&bullet;</a></li>
+                        <li><a href="#slide12">&bullet;</a></li>
+                        <li><a href="#slide13">&bullet;</a></li>
+                        <li><a href="#slide14">&bullet;</a></li>
+                        <li><a href="#slide15">&bullet;</a></li>
+                        <li><a href="#slide16">&bullet;</a></li>
+                        <li><a href="#slide17">&bullet;</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="contenedor">
+           <div>
+               <p class="elementos">
+                <small>
+                    Copyright © 2022 | BlueMoon
+               </p>
+               <ul class="lista-footer">
+                    <li>
+                        <a href="https://twitter.com/moon33_blue" target="_blank">
+                            <img src="../Imagenes/gorjeo.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/BlueeeMoon" target="_blank">
+                            <img src="../Imagenes/github.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://lntxbot.bigsun.xyz/@blue3moon" target="_blank">
+                            <img src="../Imagenes/bitcoin.png"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC-VnKfjvFkH_bNy5--cHXAA" target="_blank">
+                            <img src="../Imagenes/youtube.png"> 
+                        </a>
+                    </li>
+               </ul>
+           </div>
+        </div>
+    </footer>
+
+    <script>
+        function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        }
+            
+        function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        }
+        $('.menu-icon').click(function(){
+            $('header nav').slideToggle();
+            console.log();
+        })
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+</html>
